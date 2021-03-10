@@ -31,14 +31,6 @@ body {
 
 .tm-main-content { background-color: #ffffff; }
 
-#tm-intro-img {
-  background-image: url(https://cdn.glitch.com/446fa3c4-28f6-4e39-8a3a-a48ac4921ed7%2Fistockphoto-1223169247-612x612.jpg?v=1615050247961);
-  background-position: center;
-  background-size: cover;
-  min-height: 425px;
-  display: none;
-}
-
 .tm-text-white { color: white; }
 
 .tm-page-header-container { text-align: center; }
