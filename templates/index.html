@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Food Bank</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
-    <link href="all.min.css" rel="stylesheet" />
+    <link href= "{{ url_for('static',filename='all.min.css') }}" rel="stylesheet" />
     <link href= "{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a16c543f9b.js" crossorigin="anonymous"></script>
     
@@ -22,7 +22,6 @@ https://www.tooplate.com/view/2118-chilling-cafe
         <h1 class="tm-page-header">Food Finder</h1>
       </div>
       <div class="tm-main-content">
-        <div id="tm-intro-img"></div>
         <!-- Coffee Menu -->
         <section class="tm-section">
           <h2 class="tm-section-header">Most Recent Donations</h2>
@@ -35,6 +34,7 @@ https://www.tooplate.com/view/2118-chilling-cafe
                 <th>Date</th>
                 <th>Contact</th>
                 <th>Location</th>
+              <!--For every row of data construct a table row in HTML with required info -->
               </tr>
               {% for x in range(numrows) %}
                 <tr>
@@ -89,24 +89,5 @@ https://www.tooplate.com/view/2118-chilling-cafe
         </p>
       </footer>
     </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-      $(function() {
-        // Adjust intro image height based on width.
-        $(window).resize(function() {
-          var img = $("#tm-intro-img");
-          var imgWidth = img.width();
-
-          // 640x425 ratio
-          var imgHeight = (imgWidth * 425) / 640;
-
-          if (imgHeight < 300) {
-            imgHeight = 300;
-          }
-
-          img.css("min-height", imgHeight + "px");
-        });
-      });
-    </script>
   </body>
 </html>
